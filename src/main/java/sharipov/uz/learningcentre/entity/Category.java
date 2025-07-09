@@ -1,4 +1,4 @@
 package sharipov.uz.learningcentre.entity;
 
-public class Course {
+public class Category {
 }
