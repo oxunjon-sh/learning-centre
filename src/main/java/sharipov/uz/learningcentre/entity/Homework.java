@@ -19,8 +19,6 @@ public class Homework {
 
     private String title;
 
-    private String description;
-
     private String filePath;
 
     private LocalDateTime startTime;
@@ -30,11 +28,9 @@ public class Homework {
     @Enumerated(EnumType.STRING)
     private HomeworkStatusEnum homeworkStatus;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Teacher teacher;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Student student;
+    @OneToOne
+    @JoinColumn(name = "topic_id")
+    private Topic topic;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Group group;

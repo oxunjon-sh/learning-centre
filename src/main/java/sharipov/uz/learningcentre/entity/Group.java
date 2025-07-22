@@ -36,5 +36,8 @@ public class Group {
     private Set<Student> students = new HashSet<>();
 
     @OneToMany(mappedBy = "groups")
+    List<Topic> topics;
+
+    @OneToMany(mappedBy = "groups")
     private List<Homework> groupHomeworks;
 }

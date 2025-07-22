@@ -28,13 +28,11 @@ public class Student {
 
     private String phoneNumber;
 
+    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
+    private List<Payment> payments;
+
     @ManyToMany(mappedBy = "students", fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Group> groups;
-
-    @OneToMany(mappedBy = "students")
-    private List<Homework> personalHomeworks;
-
-
 
 }

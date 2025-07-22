@@ -32,6 +32,4 @@ public class Teacher {
     @JsonIgnore
     private Set<Group> groups;
 
-    @OneToMany(mappedBy = "teachers")
-    private List<Homework> teachingHomeworks;
 }
